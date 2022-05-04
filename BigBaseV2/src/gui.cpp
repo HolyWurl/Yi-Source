@@ -17,11 +17,11 @@
 
 namespace big
 {
-	ImFont* test;
+	ImFont* fonts;
 	void gui::dx_init()
 	{
 		ImGuiIO& io = ImGui::GetIO();
-		test = io.Fonts->AddFontFromFileTTF("c:/windows/fonts/simhei.ttf", 17.0f, NULL, io.Fonts->GetGlyphRangesChineseFull());
+		fonts = io.Fonts->AddFontFromFileTTF("c:/windows/fonts/simhei.ttf", 17.0f, NULL, io.Fonts->GetGlyphRangesChineseFull());
 
 		auto &style = ImGui::GetStyle();
 		style.WindowPadding = { 10.f, 10.f };
@@ -101,7 +101,7 @@ namespace big
 
 	void gui::dx_on_tick()
 	{
-		ImGui::PushFont(test);
+		ImGui::PushFont(fonts);
 		ImGui::SetNextWindowSize({ 800, 840 }, ImGuiCond_FirstUseEver);
 		TRY_CLAUSE
 		{

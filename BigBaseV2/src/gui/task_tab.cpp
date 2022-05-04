@@ -87,22 +87,22 @@ namespace big
 				ImGui::InputInt("玩家1分红", &player1);
 				ImGui::SameLine();
 				if(ImGui::Button("修改")) {
-					*script_global(1973496).at(823).at(56).at(1).as<int*>() = player1;
+					*script_global(1973525).at(823).at(56).at(1).as<int*>() = player1;
 				}
 				ImGui::InputInt("玩家2分红", &player2);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1973496).at(823).at(56).at(2).as<int*>() = player2;
+					*script_global(1973525).at(823).at(56).at(2).as<int*>() = player2;
 				}
 				ImGui::InputInt("玩家3分红", &player3);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1973496).at(823).at(56).at(3).as<int*>() = player3;
+					*script_global(1973525).at(823).at(56).at(3).as<int*>() = player3;
 				}
 				ImGui::InputInt("玩家4分红", &player4);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1973496).at(823).at(56).at(4).as<int*>() = player4;
+					*script_global(1973525).at(823).at(56).at(4).as<int*>() = player4;
 				}
 				ImGui::Separator();
 				if (ImGui::Button("杀死队友")) {
@@ -210,36 +210,22 @@ namespace big
 				ImGui::InputInt("玩家1分红", &player1);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1966718).at(1497).at(736).at(92).at(1).as<int*>() = player1;
+					*script_global(1966739).at(1497).at(736).at(92).at(1).as<int*>() = player1;
 				}
 				ImGui::InputInt("玩家2分红", &player2);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1966718).at(1497).at(736).at(92).at(2).as<int*>() = player2;
+					*script_global(1966739).at(1497).at(736).at(92).at(2).as<int*>() = player2;
 				}
 				ImGui::InputInt("玩家3分红", &player3);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1966718).at(1497).at(736).at(92).at(3).as<int*>() = player3;
+					*script_global(1966739).at(1497).at(736).at(92).at(3).as<int*>() = player3;
 				}
 				ImGui::InputInt("玩家4分红", &player4);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1966718).at(1497).at(736).at(92).at(4).as<int*>() = player4;
-				}
-				if (ImGui::Button("删除NPC分红(包括来斯特)")) {
-					g_fiber_pool->queue_job([]
-					{
-						STATS::STAT_SET_INT(MISC::GET_HASH_KEY("MP0_H3OPT_CREWWEAP"), 6, 0);
-						STATS::STAT_SET_INT(MISC::GET_HASH_KEY("MP0_H3OPT_CREWDRIVER"), 6, 0);
-						STATS::STAT_SET_INT(MISC::GET_HASH_KEY("MP0_H3OPT_CREWHACKER"), 6, 0);
-						//
-						STATS::STAT_SET_INT(MISC::GET_HASH_KEY("MP1_H3OPT_CREWWEAP"), 6, 0);
-						STATS::STAT_SET_INT(MISC::GET_HASH_KEY("MP1_H3OPT_CREWDRIVER"), 6, 0);
-						STATS::STAT_SET_INT(MISC::GET_HASH_KEY("MP1_H3OPT_CREWHACKER"), 6, 0);
-						*script_global(262145).at(28439).as<float*>() = 0;
-						features::notifyfmt("已执行");
-					});
+					*script_global(1966739).at(1497).at(736).at(92).at(4).as<int*>() = player4;
 				}
 				ImGui::Separator();
 				if (ImGui::Button("修复拍照")) {
@@ -312,26 +298,26 @@ namespace big
 				ImGui::InputInt("玩家1分红", &player1);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1962755).at(812).at(50).at(1).as<int*>() = player1;
+					*script_global(1962763).at(812).at(50).at(1).as<int*>() = player1;
 				}
 				ImGui::InputInt("玩家2分红", &player2);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1962755).at(812).at(50).at(2).as<int*>() = player2;
+					*script_global(1962763).at(812).at(50).at(2).as<int*>() = player2;
 				}
 				ImGui::InputInt("玩家3分红", &player3);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1962755).at(812).at(50).at(3).as<int*>() = player3;
+					*script_global(1962763).at(812).at(50).at(3).as<int*>() = player3;
 				}
 				ImGui::InputInt("玩家4分红", &player4);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1962755).at(812).at(50).at(4).as<int*>() = player4;
+					*script_global(1962763).at(812).at(50).at(4).as<int*>() = player4;
 				}
 				ImGui::TreePop();
 			}
-			if (ImGui::TreeNode("Apartment抢劫")) {
+			if (ImGui::TreeNode("公寓抢劫")) {
 				if (ImGui::Button("跳过前置(动画中使用)")) {
 					g_fiber_pool->queue_job([]
 					{
@@ -345,22 +331,22 @@ namespace big
 				ImGui::InputInt("玩家1分红", &player1);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1934631).at(3008).at(1).as<int*>() = player1;
+					*script_global(1934636).at(3008).at(1).as<int*>() = player1;
 				}
 				ImGui::InputInt("玩家2分红", &player2);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1934631).at(3008).at(2).as<int*>() = player2;
+					*script_global(1934636).at(3008).at(2).as<int*>() = player2;
 				}
 				ImGui::InputInt("玩家3分红", &player3);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1934631).at(3008).at(3).as<int*>() = player3;
+					*script_global(1934636).at(3008).at(3).as<int*>() = player3;
 				}
 				ImGui::InputInt("玩家4分红", &player4);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(1934631).at(3008).at(4).as<int*>() = player4;
+					*script_global(1934636).at(3008).at(4).as<int*>() = player4;
 				}
 				ImGui::TreePop();
 			}
@@ -455,14 +441,11 @@ namespace big
 						}
 					});
 				}
-				if (ImGui::Button("重置安保合约冷却")) {
-					*script_global(262145).at(31329).as<int*>() = 0;
-				}
 				ImGui::Separator();
 				ImGui::InputInt("最终收入(任务开始后更改)(失败需重新设置)", &finalMoney);
 				ImGui::SameLine();
 				if (ImGui::Button("修改")) {
-					*script_global(262145).at(31373).as<int*>() = finalMoney;
+					*script_global(262145).at(31389).as<int*>() = finalMoney;
 				}
 				ImGui::Separator();
 				if (ImGui::Button("传送到工厂约翰尼贡斯位置")) {
